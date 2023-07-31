@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Портфолио сайт Кэскил</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Keskil" content="Портфолио сайт Кэскил">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/1319/1319435.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("fmHMQyNuxGuq0pPDs");
+            })();
+        </script>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header" id="header">
+            <nav class="nav">
+                <a href="#" class="nav__logo">
+                    <span>Keskil</span> Nazarov
+                </a>
+
+                <div>
+                    <i class="ri-moon-clear-fill moon-mobile" onclick="myFunction(this)"></i>
+                    <button type="button" class="open__btn" id="open-btn">
+                        <i class="ri-menu-3-line"></i>
+                    </button>
+                </div>
+
+                <div class="nav__menu-bigscreen">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">Обо мне</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">Навыки</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#projects" class="nav__link">Проекты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__menu-bigscreen">
+                    <a href="#contact" class="nav__link">Оффер</a>
+                    <i class="ri-moon-clear-fill moon" onclick="myFunction(this)"></i>
+                </div>
+
+                <div class="nav__menu-mobile" id="nav-menu-mobile">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">Обо мне</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">Навыки</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#projects" class="nav__link">Проекты</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Оффер</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="close__btn" id="close-btn">
+                        <i class="ri-close-line"></i>
+                    </button>
+                </div>
+                
+            </nav> 
+        </header>
+ 
+        <main class="main">
+            <section class="home section" id="home">
+                <div class="home__container flex">
+                    <div class="home__left">
+                        <p class="home__bigger">Добро пожаловать на мой <span>сайт-портфолио</span> <span id="hand-icon">👋🏻</span></p><br>
+                        <h1 class="home__biggest myname">я <span class="name">Кэскил</span> Назаров </h1><br>
+                        <p class="home__bigger">Frontend-разработчик 👨🏻‍💻</p><br>
+                        <p class="home__small">Со знаниями в веб-разработке, мобильной разработке <br> и немного в дизайне, я создал крутые пет-проекты 😎💻</p><br><br>
+                        <a href="#contact" class="button">Оставить оффер🤝🏻</a><br><br><br>
+                      
+                        <a href="https://github.com/Nazarov555" class="github__link" target="_blank">
+                            <i class="ri-github-fill"></i> 
+                            Мои гитхаб
+                        </a>
+                    </div>
+                    <div class="home__right">
+                        <img src="assets/images/me.jpg" alt="Me photo">
+                    </div>
+                </div>
+            </section>
+
+            <section class="about section" id="about">
+                <div class="about-me__container">
+                    <img src="assets/icons/programmer.png" alt="programmer icon" width="60">
+                    <p class="section__subtitle">Моё <span>интро</span></p>
+                    <h1 class="section__title">Обо мне</h1>
+                    <p class="section__normal about-me__desc">Frontend-разработчик, 
+                        верстаю макеты сайтов на языке разметки HTML<img src="assets/icons/html.png" alt="html icon"> и на языке стилей
+                        CSS<img src="assets/icons/css.png" alt="css icon"> из инструмента для дизайна 
+                        Figma<img src="assets/icons/figma.png" alt="figma icon"> .
+                        Обожаю JavaScript<img src="assets/icons/js.png" alt="js icon"> и 
+                        его строго типизированного брата  TypeScript<img src="assets/icons/ts.png" alt="ts icon">.
+                        Я создаю SPA приложения на ReactJS<img src="assets/icons/react.png" alt="react icon"> 
+                        и немного на  VueJS<img src="assets/icons/vue.png" alt="vue icon">, 
+                        используя вместе с библиотекой управления состояния приложений 
+                        Redux<img src="assets/icons/redux.png" alt="redux icon">. И всё это разрабатываю с помощью сборщиков, таких как: прогрессивный Vite<img src="assets/icons/vite.svg" alt="vite icon"> и 
+                        стандартный Webpack<img src="assets/icons/webpack.png" alt="webpack icon">. Иногда, когда захочется украшаю их с помощью
+                        CSS фреймворков, такие как TailwindCSS<img src="assets/icons/tailwind.png" alt="tailwind css icon">
+                        и MaterialUI<img src="assets/icons/materialui.png" alt="material ui icon">.
+                        Также UI мобильных приложений на 
+                        React Native<img src="assets/icons/reactnative.png" alt="react native icon">. 
+                        Кроме того, пишу немного🤏 backend на том же JavaScript = NodeJS<img src="assets/icons/node.png" alt="node js icon">. 💻
+                    </p><br><br>
+                    <button class="button">
+                        <a href="docs/cv.docx" download>Скачать моё резюме</a>
+                    </button>
+                    
+                </div>
+            </section>
+
+            <section class="skills" id="skills">
+                <div class="skills__content">
+                    <div class="skills__text">
+                        <p class="section__subtitle">Любимые <span>Скиллы</span></p>
+                        <h1 class="section__title my-skills">Мои Навыки <img src="assets/images/animated-laptop.gif" alt="laptop gif"></h1>
+                        <p class="section__subtitle">Вот мои hard-skills, благодаря которым я создаю свои проекты.</p>
+                        <a href="#projects" class="button">Смотреть проекты</a>
+                    </div>
+                    <div class="skills__container">
+                       <div class="skills__wrapper flex skills__section">
+
+                            <article class="skill-card__container">
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/images/html.png" alt="html" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">HTML</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">
+                                            HTML (от английского HyperText Markup Language) — 
+                                            это язык гипертекстовой разметки текста. 
+                                            Он нужен, чтобы размещать на веб-странице 
+                                            элементы: текст, картинки, таблицы и видео и т.д.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="skill-card__container">
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/images/css.png" alt="css" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">CSS</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">
+                                            Термин расшифровывается как Cascading Style Sheets,
+                                            это язык описания внешнего вида документа, 
+                                            то есть он отвечает за то, как выглядят 
+                                            веб-страницы: цвет фона и декоративных элементов, 
+                                            размер и стиль шрифтов. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="skill-card__container">
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/images/js.png" alt="javascript" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">JavaScript</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">
+                                            JavaScript — это широко используемый 
+                                            язык программирования, который позволяет 
+                                            добавлять интерактивность и динамическое 
+                                            поведение на веб-страницах. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="skill-card__container">
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/images/ts.png" alt="TypeScript" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">TypeScript</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">  
+                                            TypeScript — это язык программирования, 
+                                            являющийся надмножеством языка JavaScript. 
+                                            Он добавляет статическую типизацию, классы, 
+                                            интерфейсы и другие возможности.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="skill-card__container">
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/images/react.png" alt="react" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">ReactJS</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">
+                                            React — это JavaScript-библиотека 
+                                            для создания пользовательского интерфейса. 
+                                            Она позволяет разработчикам строить компоненты, 
+                                            которые обновляются эффективно и отзывчиво при 
+                                            изменении данных.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="skill-card__container">
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/images/redux.png" alt="redux" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">Redux</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">
+                                            Redux — это библиотека для управления 
+                                            состоянием приложений на языке JavaScript. 
+                                            Она предоставляет предсказуемую и централизованную 
+                                            модель данных, которая упрощает управление 
+                                            состоянием приложения и обновление 
+                                            пользовательского интерфейса. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="skill-card__container">
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/images/react-native.png" alt="react-native" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">ReactNative</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">       
+                                            React Native — это фреймворк для 
+                                            разработки мобильных приложений с 
+                                            использованием языка JavaScript и 
+                                            библиотеки React. Он позволяет 
+                                            разработчикам создавать кросс-платформенные 
+                                            приложения для платформ Android и iOS, используя общий код.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="skill-card__container">
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/images/vue.png" alt="vuejs" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">VueJS</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">
+                                            Vue.js — это прогрессивный JavaScript-фреймворк
+                                            для разработки пользовательского интерфейса. 
+                                            Он позволяет разработчикам создавать одностраничные приложения (SPA) с 
+                                            использованием компонентной архитектуры.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="skill-card__container">
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/images/nodejs.png" alt="nodejs" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">NodeJS</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">
+                                            Node.js — это среда выполнения JavaScript,
+                                            которая позволяет разработчикам выполнять JavaScript
+                                            на стороне сервера. Node.js основан на 
+                                            движке V8 и 
+                                            предоставляет доступ к множеству 
+                                            модулей и инструментов для серверной части веб-приложений.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="skill-card__container">
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/images/tailwind-css.png" alt="tailwind-css" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">TailwindCSS</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">
+                                            Tailwind CSS - это CSS-фреймворк, 
+                                            который позволяет создавать пользовательские 
+                                            интерфейсы при помощи набора готовых классов. 
+                                            Он был разработан для ускорения процесса разработки 
+                                            и облегчения поддержки кода.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="skill-card__container">
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/icons/materialui.png" alt="MaterialUI" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">MaterialUI</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">
+                                            MaterialUI — CSS фреймворк, предоставляющий 
+                                            готовые google решения для быстрой и довольно 
+                                            простой web разработки.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="skill-card__container">
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/images/git.png" alt="git" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">Git</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">
+                                            Git — это распределенная система контроля 
+                                            версий, используемая разработчиками для управления 
+                                            кодовой базой. Она позволяет отслеживать изменения, 
+                                            создавать ветки, объединять код из разных источников 
+                                            и управлять историей проекта. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="skill-card__container"> 
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/images/github.png" alt="github" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">GitHub</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">
+                                            GitHub — это платформа разработки 
+                                            программного обеспечения. Она 
+                                            предоставляет репозитории для хранения кода, 
+                                            инструменты совместной работы, возможности 
+                                            отслеживания изменений и управления задачами разработки.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="skill-card__container">
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/images/figma.png" id="figma" alt="figma" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">Figma</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">
+                                            Figma — это онлайн-платформа 
+                                            для дизайна пользовательского 
+                                            интерфейса и совместной работы. 
+                                            Она позволяет дизайнерам создавать 
+                                            векторные макеты, прототипы и дизайн-системы.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="skill-card__container">
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/icons/vite.svg" alt="vite" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">Vite</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">
+                                            Vite - это современный сборщик 
+                                            модулей (bundler) для JavaScript-приложений , 
+                                            менее кастомизируемый, чем Webpack , но гораздо более быстрый. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="skill-card__container">
+                                <div class="skill-card">
+                                    <div class="skill-card-front">
+                                        <img src="assets/images/webpack.png" alt="webpack" loading="lazy">
+                                        <div class="skill-text__front">
+                                            <p class="skills__desc" id="skills-desc">WebPack</p>
+                                            <span class="material-symbols-outlined skill-arrow__front">
+                                                touch_app
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card-back">
+                                        <p class="skill-text__back">
+                                            WebPack — это инструмент сборки для модульной разработки 
+                                            веб-приложений. Он позволяет разработчикам 
+                                            управлять зависимостями, объединять, 
+                                            минифицировать и оптимизировать ресурсы, 
+                                            такие как JavaScript, CSS, изображения и другие файлы.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                       </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects section" id="projects">
+                <h1 class="section__title">Мои проекты</h1>
+            </section>
+
+            <section class="contact section flex" id="contact">
+                <img src="assets/icons/mail.png" alt="email icon" width="60"><br>
+                <p class="section__subtitle">Напишите мне ваше <span>сообщение</span></p>
+                <h1 class="section__title">
+                    Оставить оффер на работу 👨🏻‍💻💼
+                </h1>            
+                
+                <p id="error-message"></p>
+
+                <div class="contact__container">
+                    <form action="" class="contact__form" id="contact-form">
+            
+                        <div class="contact__group">
+                            <input type="tel"  name="user_number" id="user-number" class="contact__input" required placeholder="Номер компании..." >
+                            <input type="email" name="user_email" id="user-email" class="contact__input" required placeholder="Почта компании...">
+                        </div>
+                        <textarea name="user_project" id="user-project" required placeholder="Ваше сообщение (оффер)..." class="contact__input"></textarea>
+
+                        <p class="contact__message" id="contact-message"></p>
+
+                        <button type="button" onclick="sendEmail()" class="button contact__button">Отправить</button>
+                    </form>
+                    <p class="section__title" id="thanks-title"></p>
+                </div>
+
+            </section>
+        </main> 
+        <footer>
+            <p class="section__subtitle">Made by Keskil Nazarov using HTML & CSS & JS &copy<span id="year"></span></p>
+            <div class="messenger__container">
+                <div class="telegram">
+                    <img src="assets/icons/telegram.png" alt="telegram icon">
+                    <a href="https://t.me/programde" class="telegram__link" target="_blank">Мой телеграм</a>
+                </div>
+                <div class="whatsapp">
+                    <img src="assets/icons/whatsapp.png" alt="whatsapp icon">
+                    <a href="https://wa.me/+79644210500" class="wa__link" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="lightmode.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html=>
