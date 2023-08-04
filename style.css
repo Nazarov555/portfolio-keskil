@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 :root {
+    --mario: 100rem;
     --hue: 198;
     --first-color: hsl(var(--hue), 98%, 49%);
     --first-color-alt: hsl(var(--hue), 56%, 40%);
