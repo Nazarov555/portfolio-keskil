@@ -109,7 +109,6 @@ body {
     background-color: var(--body-color);
     color: var(--text-color);
 }
-
 ::selection {
     background-color: var(--first-color);
     color: var(--title-color);
@@ -227,6 +226,7 @@ button {
 main {
     overflow: hidden;
     margin-top: 3rem; /* For animation scroll-reveal*/
+    margin-bottom: -2.2rem;
 }
 
 .button {
@@ -245,7 +245,6 @@ main {
     transform: scale(0.9);
 }
 
-
 /*===========Navbar==========*/
 .header {
     position: fixed;
@@ -258,6 +257,7 @@ main {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     scroll-padding: 0;
+    transition: .5s;
 }
 .nav {
     display: flex;
@@ -285,9 +285,16 @@ main {
 .nav__link:hover {
     color: var(--first-color);
 }
-.close__btn i, .open__btn i, .moon-mobile {
+.close__btn i, 
+.open__btn i, 
+.moon-mobile {
     font-size: 2.5rem;
     cursor: pointer;
+    display: none;
+}
+/* === mobile menu icons === */
+
+.mobile-icons__wrapper {
     display: none;
 }
 
@@ -320,6 +327,7 @@ main {
     border-radius: 50px;
     box-shadow: var(--first-color) 0 0 20px;
 }
+
 
 .github__link:hover  {
     color: var(--first-color);
@@ -582,9 +590,12 @@ footer p {
     }
 }
 /*========Mobile Breakpoint==========*/
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 770px) {
+    .header--hidden {
+        transform: translateY(-100%);
+    }
     .nav__menu-mobile {
-        position: fixed;
+        position: absolute;
         z-index: var(--z-fixed);
         right: -100%;
         top: 0;
@@ -619,6 +630,28 @@ footer p {
         top: 1rem;
         right: 1.5rem;
     } 
+
+    .mobile-icons__container {
+        width: 100vw;
+      
+    }
+    .mobile-icons__wrapper {  
+        background-color: transparent;
+        background-color: hsla(0, 0%, 10%, .3);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: var(--z-fixed);
+        font-size: 2rem;
+    }
+    .mobile-icon__item .mobile-icon.active {
+        color: var(--first-color);
+    }
+
     .section__normal {
         font-size: 1rem;
     }
@@ -651,6 +684,10 @@ footer p {
 
     .messenger__container {
         gap: 2rem;
+    }
+
+    footer {
+        margin-bottom: 3rem;
     }
 }
 
@@ -704,5 +741,8 @@ footer p {
     }
     .skill-text__back {
         font-size: .6rem;
+    }
+    .mobile-icons__wrapper {
+        font-size: 1.7rem;
     }
 }
