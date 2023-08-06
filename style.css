@@ -322,6 +322,16 @@ main {
     text-shadow: var(--first-color) 0 10px 20px;
 }
 
+.home__right {
+    transition-duration: 300ms;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+    transform: rotate3d(0);
+    cursor: pointer;
+}
+.home__right :hover {
+    transition-duration: 150ms;
+}
 .home__right img {
     width: 15rem;
     border-radius: 50px;
