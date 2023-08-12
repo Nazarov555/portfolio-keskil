@@ -10,4 +10,12 @@ window.addEventListener("scroll", () => {
     lastScrollY = window.scrollY;
 }) 
 
-  
+let scrollUpButton = document.getElementById("scroll-up");
+
+window.addEventListener('scroll', () => {
+  if(window.pageYOffset > 600) {
+    scrollUpButton.classList.add("active");
+  }else {
+    scrollUpButton.classList.remove("active");
+  }
+})

@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 :root {
-    --mario: 100rem;
     --hue: 198;
     --first-color: hsl(var(--hue), 98%, 49%);
     --first-color-alt: hsl(var(--hue), 56%, 40%);
@@ -33,6 +32,7 @@
 }
 .ri-sun-fill, .moon {
     cursor: pointer;
+    font-size: 1.9rem;
 }
 .light {
     background-color: #fff;
@@ -268,6 +268,9 @@ main {
 }
 .nav__menu-bigscreen {
     transform: translate(-8rem);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
 }
 .nav__menu-mobile {
     display: none;
@@ -329,7 +332,7 @@ main {
     transform: rotate3d(0);
     cursor: pointer;
 }
-.home__right :hover {
+.home__right:hover {
     transition-duration: 150ms;
 }
 .home__right img {
@@ -587,8 +590,35 @@ footer p {
     transition: .2s;
 }
 
+.scrollup {
+    /* border: none;
+    outline: none;
+    appearance: none; 
+    cursor: pointer; */
+    position: fixed; 
+    right: 2rem;
+   
+    background-color: hsl(228, 20%, 26%);
+    color: var(--first-color);
+    padding: 6px;
+    display: inline-flex;
+    border-radius: .25rem;
+    font-size: 2rem;
+    box-shadow: 0, 4px 12px hsla(228, 15%, 8%, .4);
+    z-index: var(--z-fixed);
+    transition: bottom .4s, transform .4s;
+    opacity: 0;
+}
+.scrollup:hover {
+    transform: translateY(-.25rem);
+    border: 1px solid var(--first-color);
+}
+.scrollup.active {
+    bottom: 3rem;
+    opacity: 1;
+}
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1100px) {
     .nav__menu-bigscreen {
         transform: translate(0);
     }
@@ -643,7 +673,6 @@ footer p {
 
     .mobile-icons__container {
         width: 100vw;
-      
     }
     .mobile-icons__wrapper {  
         background-color: transparent;
@@ -657,9 +686,19 @@ footer p {
         width: 100%;
         z-index: var(--z-fixed);
         font-size: 2rem;
+        padding-top: .6rem;
     }
     .mobile-icon__item .mobile-icon.active {
         color: var(--first-color);
+    }
+    .mobile-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile-icon small {
+        font-size: 1rem;
     }
 
     .section__normal {
@@ -698,6 +737,10 @@ footer p {
 
     footer {
         margin-bottom: 3rem;
+    }
+
+    .scrollup {
+        right: -100%;
     }
 }
 
@@ -754,5 +797,8 @@ footer p {
     }
     .mobile-icons__wrapper {
         font-size: 1.7rem;
+    }
+    .mobile-icon small {
+        font-size: 0.7rem;
     }
 }

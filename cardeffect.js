@@ -23,15 +23,6 @@ function rotateToMouse(e) {
     )
   `;
   
-  card.querySelector('.glow').style.backgroundImage = `
-    radial-gradient(
-      circle at
-      ${center.x * 4 + bounds.width/4}px
-      ${center.y * 4 + bounds.height/4}px,
-      #ffffff55,
-      #0000000f
-    )
-  `;
 }
 
 card.addEventListener('mouseenter', () => {
