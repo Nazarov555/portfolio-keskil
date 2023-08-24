@@ -238,6 +238,9 @@ main {
     font-size: var(--h1-font-size);
     font-weight: var(--font-semi-bold);
 }
+.nav__link {
+    color: #fff;
+}
 .nav__link:hover {
     color: var(--first-color);
 }
@@ -256,14 +259,17 @@ main {
 .mobile-icons__wrapper {
     display: none;
 }
+.mobile-icon {
+    color: #fff;
+}
 
 .switch__bigscreen, 
 .switch__mobile {
-    background-color: var(--container-color);
+    background-color: hsl(228, 15%, 15%);
     cursor: pointer;
     border: 1px solid white;
     outline: none;
-    color: var(--text-color);
+    color: #fff;
     border-radius: 5px;
 }
 
@@ -651,6 +657,7 @@ footer p {
         position: absolute;
         top: 1rem;
         right: 1.5rem;
+        color: #fff;
     } 
     #dark-mode-mobile {
         display: inline-block;
