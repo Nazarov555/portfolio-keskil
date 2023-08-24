@@ -30,71 +30,22 @@
 .ri-sun-fill {
     color: yellow;
 }
-.ri-sun-fill, .moon {
+.ri-sun-fill, .ri-moon-clear-fill {
     cursor: pointer;
     font-size: 1.9rem;
 }
-.light {
-    background-color: #fff;
-    color: #000;
+
+[data-theme="light"] {
+    --text-color: #000;
+    --title-color: #000;
+    --container-color: #fff;
+    --body-color: #fff;
 }
-.light .nav__menu-mobile {
-   background-color: gray;
-}
-.light .close__btn {
-    color: #000;
-}
-.light .open__btn {
-    color: #000;
-}
-.light .section__title {
-    color: #000;
-}
-.light .section__normal {
-    color: #000;
-}
-.light .section__subtitle {
-    color: #000;
-}
-.light .home__biggest {
-    color: #000;
-}
-.light .home {
-    background-color: #fff;
-    color: #000;
-}
-.light .home a {
-    color: #000;
-}
-.light .skills {
-    background-color: #fff;
-    color: #000;    
-}
-.light .skills__desc {
-    color: #000;
-}
-.light .skill-text__back {
-    color: #000;
-}
-.light .skill-arrow__front {
-    color: #000;
-}
-.light .projects {
-    background-color: #fff;
-    color: #000;  
-}
-.light .contact__input {
-    background-color: rgba(128, 128, 128, 0.345);
-    color: #000;
-}
-.light .contact__input::placeholder {
-    color: #000;
-}
-.light .contact__message {
-    color: #000;
-}
-.light footer .section__subtitle {
-    color: #fff;
+[data-theme="dark"] {
+    --text-color: hsl(228, 8%, 65%);
+    --title-color: hsl(228, 8%, 95%);
+    --container-color: hsl(228, 15%, 15%);
+    --body-color: hsl(228, 15%, 20%);
 }
 
 * {
@@ -116,14 +67,13 @@ body {
 ::-webkit-scrollbar {
     width: .5rem;
     border-radius: .5rem;
-    background-color: hsl(228, 12%, 25%);
 }
 ::-webkit-scrollbar-thumb {
-    background-color: hsl(228, 8%, 35%);
+    background-color: var(--first-color);
     border-radius: 20px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(228, 8%, 45%);
+    background-color: var(--first-color-alt);
 }
 
 input,
@@ -236,7 +186,10 @@ main {
     font-weight: var(--font-semi-bold);
     cursor: pointer;
     transition: .1s;
-    color: var(--title-color);
+    color: #fff;
+}
+.button a {
+    color: #fff;
 }
 .button:hover {
     background-color: var(--first-color-alt);
@@ -289,15 +242,32 @@ main {
     color: var(--first-color);
 }
 .close__btn i, 
-.open__btn i, 
-.moon-mobile {
+.open__btn i {
     font-size: 2.5rem;
     cursor: pointer;
     display: none;
 }
+#dark-mode-mobile {
+    display: none;
+}
+
 /* === mobile menu icons === */
 
 .mobile-icons__wrapper {
+    display: none;
+}
+
+.switch__bigscreen, 
+.switch__mobile {
+    background-color: var(--container-color);
+    cursor: pointer;
+    border: 1px solid white;
+    outline: none;
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+.switch__mobile {
     display: none;
 }
 
@@ -500,17 +470,20 @@ main {
     bottom: 3rem;
     width: 100%;
 }
+.skill-text__front p {  
+    color: var(--title-color);
+}
 .skill-arrow__front {
     font-size: 1.8rem;
-    color: #fff;
+    color: #fff
 }
 .skill-card-back {
     transform: rotateX(180deg);
     padding: 2rem 1rem;
 }
 .skill-text__back {
-    color: #fff;
     font-size: 1rem;
+    color: var(--title-color);
 }
 #figma {
     width: 7rem;
@@ -525,14 +498,19 @@ main {
     margin: .2rem;
     padding: 1rem 1.25rem;
     border-radius: .5rem;
-    background-color: var(--container-color);
-    color: var(--title-color);
+    background-color: hsl(228, 15%, 15%);
+    color: #fff;
+    transition: .5s;
 }
 .contact__input::placeholder {
-    color: var(--text-color);
+    color: hsl(228, 8%, 65%);
 }
 .contact__input:focus {
     border: 1px solid var(--first-color);
+}
+.contact__input:focus::placeholder {
+    color: var(--first-color);
+    transition: .5s;
 }
 .contact__button:disabled {
     background-color: gray;
@@ -630,7 +608,7 @@ footer p {
     }
 }
 /*========Mobile Breakpoint==========*/
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 808px) {
     .header--hidden {
         transform: translateY(-100%);
     }
@@ -650,6 +628,9 @@ footer p {
     .nav__menu-mobile.show-menu {
         right: 0;
     }
+    .switch__mobile {
+        display: inline-block;
+    }
     .nav__menu-bigscreen {
         display: none;
     }
@@ -662,7 +643,8 @@ footer p {
     .nav__link {
         font-size: var(--bigger-font-size);
     }
-    .close__btn i, .open__btn i, .moon-mobile {
+    .close__btn i, 
+    .open__btn i {
         display: inline-block;
     }
     .close__btn {
@@ -670,7 +652,9 @@ footer p {
         top: 1rem;
         right: 1.5rem;
     } 
-
+    #dark-mode-mobile {
+        display: inline-block;
+    }
     .mobile-icons__container {
         width: 100vw;
     }

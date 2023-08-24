@@ -33,7 +33,7 @@ function sendEmail() {
         user_project:  document.getElementById("user-project").value
     }
 
-    let contactBtn = document.querySelector('.contact__button');
+    let contactBtn = document.getElementById('send-button');
     const serviceID = "service_rh40rie";
     const templateID = "template_2mekcra";
 
