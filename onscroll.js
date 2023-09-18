@@ -8,7 +8,7 @@ window.addEventListener("scroll", () => {
         header.classList.remove("header--hidden");
     }
     lastScrollY = window.scrollY;
-}) 
+}); 
 
 const scrollUp = document.querySelector('.scrollup');
 
@@ -18,5 +18,5 @@ window.addEventListener('scroll', ()=>{
     } else {
         scrollUp.classList.remove('active');
     }
-})
+});
 

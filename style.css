@@ -16,7 +16,7 @@
     --h2-font-size: 1.25rem;
     --h3-font-size: 1rem;
     --normal-font-size: 1.2rem;
-    --small-font-size: .813rem;
+    --small-font-size: 1rem;
     --smaller-font-size: .75rem;
 
     --font-regular: 400;
@@ -41,7 +41,7 @@
     --container-color: #fff;
     --body-color: #fff;
 }
-[data-theme="dark"] {
+[data-theme="dark"] { 
     --text-color: hsl(228, 8%, 65%);
     --title-color: hsl(228, 8%, 95%);
     --container-color: hsl(228, 15%, 15%);
@@ -301,6 +301,28 @@ main {
     text-shadow: var(--first-color) 0 10px 20px;
 }
 
+.frontend-title {
+    color: rgb(67, 162, 67); 
+    font-weight: 600; 
+    font-size: 1.5rem;  
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 5px solid #fff;
+    border-width: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    animation: typing 3s steps(25) infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
 .home__right {
     transition-duration: 300ms;
     transition-property: transform;
@@ -481,7 +503,7 @@ main {
 }
 .skill-arrow__front {
     font-size: 1.8rem;
-    color: #fff
+    color: var(--title-color);
 }
 .skill-card-back {
     transform: rotateX(180deg);

@@ -1,14 +1,14 @@
 const container = document.body;
-if(localStorage.getItem("data-theme")){
-  container.setAttribute("data-theme",localStorage.getItem("data-theme")); 
-  toggleDark(1)
+if (localStorage.getItem("data-theme")) {
+  container.setAttribute("data-theme", localStorage.getItem("data-theme")); 
+  toggleDark(1);
 } 
 //actually use the saved value
 function toggleDark(theme) {//this function is executed when switching from the current theme to the other
   const dataTheme = container.getAttribute("data-theme");
   let theme_switch;
-  if(dataTheme === "light") {theme_switch = 1} else {theme_switch = 0}
-  if(theme){theme_switch = !theme_switch}//so the oppisite of the theme stored is used when calling this function 
+  if(dataTheme === "light") { theme_switch = 1 } else { theme_switch = 0 }
+  if(theme) { theme_switch = !theme_switch }//so the oppisite of the theme stored is used when calling this function 
   if (theme_switch) {
     container.setAttribute("data-theme", "dark");
     document.getElementById("night").style.display = "none";
@@ -37,10 +37,10 @@ for (var i = 0; i < mobileIcons.length; i++) {
   
     // If there's no active class
     if (current.length > 0) {
-      current[0].className = current[0].className.replace(" active", "");
+      current[0].className = current[0].className.replace("active", "");
     }
   
     // Add the active class to the current/clicked button
-    this.className += " active";
+    this.className += "active";
   });
 }
