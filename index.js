@@ -14,7 +14,32 @@ openBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     navMenu.classList.remove('show-menu');
 });
-
+let touchStart; 
+let touchEnd;
+// 1 способ
+navMenu.addEventListener('touchstart',
+    e => (touchStart = e.changedTouches[0].pageX)
+);
+navMenu.addEventListener('touchmove',
+    e => (touchEnd = e.changedTouches[0].pageX) 
+);
+navMenu.addEventListener('touchend', e => {
+    if (touchStart - touchEnd < 800) {
+      navMenu.classList.remove('show-menu');
+    }
+});
+// 2 способ
+// navMenu.addEventListener('touchstart',
+//     e => (touchStart = e.targetTouches[0].clientX)
+// );
+// navMenu.addEventListener('touchmove',
+//     e => (touchEnd = e.targetTouches[0].clientX) 
+// );
+// navMenu.addEventListener('touchend', e => {
+//     if (touchEnd - touchStart < 800) {
+//       navMenu.classList.remove('show-menu');
+//     }
+// });
 //Remove menu when clicked on mobile
 
 const navLink = document.querySelectorAll('.nav__link');

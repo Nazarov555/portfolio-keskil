@@ -28,19 +28,19 @@ function toggleDark(theme) {//this function is executed when switching from the 
 
 
 //Menu icon active
-const mobileIcons = document.getElementsByClassName('mobile-icon');
+//const mobileIcons = document.querySelector('.mobile-icon');
 
 // Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < mobileIcons.length; i++) {
-  mobileIcons[i].addEventListener("click", function() {
-    let current = document.getElementsByClassName("active");
+// for (let i = 0; i < mobileIcons.length; i++) {
+//   mobileIcons[i].addEventListener("click", function() {
+//     let current = document.querySelector(".colored");
+    
+//     // If there's no active class
+//     if (current.length > 0) {
+//       current[0].className = current[0].className.replace("colored", "");
+//     }
   
-    // If there's no active class
-    if (current.length > 0) {
-      current[0].className = current[0].className.replace("active", "");
-    }
-  
-    // Add the active class to the current/clicked button
-    this.className += "active";
-  });
-}
+//     // Add the active class to the current/clicked button
+//     this.className += "colored";
+//   });
+// }
