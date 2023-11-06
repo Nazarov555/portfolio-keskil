@@ -40,6 +40,7 @@ navMenu.addEventListener('touchend', e => {
 //       navMenu.classList.remove('show-menu');
 //     }
 // });
+
 //Remove menu when clicked on mobile
 
 const navLink = document.querySelectorAll('.nav__link');

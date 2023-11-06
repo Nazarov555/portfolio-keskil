@@ -1,3 +1,18 @@
+const iconList = document.querySelectorAll('.mobile-icon');
+
+iconList.forEach(icon => {
+    icon.addEventListener('click', () => {
+        hideAllItems()
+
+        icon.classList.add('active')
+    })
+})
+
+function hideAllItems() {
+    iconList.forEach(icon => icon.classList.remove('active'))
+}
+
+
 let lastScrollY = window.screenY;
 let header = document.getElementById("header");
 

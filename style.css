@@ -34,6 +34,13 @@
     cursor: pointer;
     font-size: 1.9rem;
 }
+/* #preloader {
+    background: #000 url("assets/Gear-0.2s-200px.svg") no-repeat center;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+    position: fixed;
+} */
 
 [data-theme="light"] {
     --text-color: #000;
@@ -703,8 +710,8 @@ footer p {
         font-size: 2rem;
         padding-top: .6rem;
     }
-    .mobile-icon.colored {
-        color: var(--first-color);
+    .mobile-icon.active {
+        background-color: var(--first-color);
     }
     .mobile-icon {
         display: flex;
